@@ -45,11 +45,11 @@ int is_palindrome(listint_t **head)
 			add_nodeint(&new_r, temp->n);
 			temp = temp->next;
 		}
-		while (rev && *head != NULL)
+		while (new_r && *head != NULL)
 		{
-			if ((*head)->n == rev->n)
+			if ((*head)->n == new_r->n)
 			{
-				rev = rev->next;
+				new_r = new_r->next;
 				*head = (*head)->next;
 			}
 			else
