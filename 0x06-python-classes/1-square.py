@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Square that defines a square by
+       size = no type value
+"""
 
 
 class Square:
