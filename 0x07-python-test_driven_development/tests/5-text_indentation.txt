@@ -1,9 +1,9 @@
 ====================
-2. Say my name module:
+2.prints a text module:
 ====================
 
 Import module:
-    >>> say_my_name = __import__('5-text_indentation').text_indentation
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Function:
 =======.
@@ -35,10 +35,8 @@ Test no delim:
 Test newline 3:
     >>> text_indentation("Yup\n\n")
     Yup
-    <BLANKLINE>
 
-
->>> text_indentation(" .??:?. “)
+>>> text_indentation(" .??:?. ")
 .
 <BLANKLINE>
 ?
@@ -63,7 +61,7 @@ Section types
 =============
 'text' is string:
     >>> text_indentation("Hola")
-    Hola>>>
+    Hola
 
 'text' is not str:
     >>> text_indentation(5)

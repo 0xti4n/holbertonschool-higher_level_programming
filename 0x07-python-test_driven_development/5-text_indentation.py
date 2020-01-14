@@ -16,7 +16,6 @@ def text_indentation(text):
         temp = 0
         for i in text:
             if temp is 1 and i is ' ':
-                temp = 0
                 continue
             if i == '.' or i == '?' or i == ':':
                 print(i, end='')
@@ -25,6 +24,5 @@ def text_indentation(text):
             else:
                 print(i, end='')
                 temp = 0
-        print()
     else:
         raise TypeError('text must be a string')
