@@ -13,8 +13,8 @@ class TestMaxInteger(unittest.TestCase):
     def test_empty(self):
         self.assertIsNone(max_integer([]))
 
-    def test_max_int(self):
-        self.assertEqual(max_integer([1, 3, 333333333]), 333333333)
+    def test_max_int_beginning(self):
+        self.assertEqual(max_integer([100, 3, 33]), 100)
 
     def test_float(self):
         self.assertNotEqual(max_integer([4.2, 3, 5]), 4.2)
