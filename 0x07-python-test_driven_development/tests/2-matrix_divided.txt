@@ -17,7 +17,8 @@ otherwise raise a TypeError exception with the message Each row of the matrix mu
 div must be a number (integer or float),
 otherwise raise a TypeError exception with the message div must be a number
 div can't be equal to 0,
-otherwise raise a ZeroDivisionError exception with the message division by zero:
+otherwise raise a ZeroDivisionError exception with the message division by zero
+
 'type' type return with list:
     >>> type(matrix_divided([[1, 1.22],[2, 5.9],[0, 10]], 2))
     <class 'list'>

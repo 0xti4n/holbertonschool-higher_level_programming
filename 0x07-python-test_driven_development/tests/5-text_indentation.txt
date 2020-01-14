@@ -7,14 +7,12 @@ Import module:
 
 Function:
 =======.
-Write a function that prints My name is <first name> <last name>
+Write a function that prints a text with 2 new lines after each of these characters: ., ? and :
 
 Operations:
 =========
-first_name and last_name must be strings otherwise,
-raise a TypeError exception with the message
-first_name must be a string or last_name must be a string:
-
+text must be a string
+There should be no space at the beginning or at the end of each printed line
 
 >>> text_indentation(6)
 Traceback (most recent call last):
