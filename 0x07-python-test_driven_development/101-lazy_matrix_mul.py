@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import numpy as np
 
+
 def matrix_mul(m_a, m_b):
     m1 = "m_a must be a list"
     m2 = "m_b must be a list"
@@ -52,7 +53,7 @@ def matrix_mul(m_a, m_b):
             raise TypeError(m10)
 
     if len(m_a[0]) == len(m_b):
-        return np.dot(m_a,m_b)
+        return np.dot(m_a, m_b)
 
     else:
         raise TypeError(m11)
