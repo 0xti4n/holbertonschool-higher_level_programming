@@ -3,14 +3,12 @@
 
 
 class BaseGeometry:
-    """Function"""
+    """class with public method"""
     def area(self):
-        """function"""
-        raise Exception('area() is not implemented')
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """function"""
         if type(value) is not int:
-            raise TypeError('{} must be and integer'.format(name))
+            raise TypeError("{} must be and integer".format(name))
         if value <= 0:
-            raise ValueError('{} must be greater than 0'.format(name))
+            raise ValueError("{} must be greater than 0".format(name))
