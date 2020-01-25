@@ -59,3 +59,34 @@ class Base:
             for i in data:
                 l.append(cls.create(**i))
             return l
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        if list_objs is not None:
+            l = []
+            for i in list_objs:
+                name = i.__class__.__name__
+                l.append(i.to_dictionary())
+                name += ".csv"
+            with open(name, mode="w") as f:
+                f.write(cls.to_json_string(l))
+        else:
+            name2 = cls.__name__
+            name2 += ".csv"
+            with open(name2, mode="w") as f:
+                f.write("[]")
+
+    @classmethod
+    def load_from_file_csv(cls):
+        name = cls.__name__
+        name += ".csv"
+        with open(name, mode="r") as f:
+            data = cls.from_json_string(f.read())
+            l = []
+            for i in data:
+                l.append(cls.create(**i))
+            return l
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        pass
