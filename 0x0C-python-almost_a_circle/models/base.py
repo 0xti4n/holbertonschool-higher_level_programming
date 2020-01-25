@@ -21,4 +21,5 @@ class Base:
     
     @classmethod
     def save_to_file(cls, list_objs):
-        
+        if list_objs is None:
+            
