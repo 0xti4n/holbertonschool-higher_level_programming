@@ -59,14 +59,17 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """load from file"""
-        name = cls.__name__
-        name += ".json"
-        with open(name, mode="r") as f:
-            data = cls.from_json_string(f.read())
-            l = []
+        try:
+            name = cls.__name__
+            name += ".json"
+            with open(name, mode="r") as f:
+                data = cls.from_json_string(f.read())
+                l = []
             for i in data:
                 l.append(cls.create(**i))
             return l
+        except:
+            return []
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
