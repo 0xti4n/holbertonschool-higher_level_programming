@@ -49,7 +49,7 @@ class Base:
         """ create"""
         if cls.__name__ == "Rectangle":
             dummy = cls(2, 4, 45, 46)
-        else:
+        elif cls.__name__ == "Square"
             dummy = cls(6)
         dummy.update(**dictionary)
         return dummy
