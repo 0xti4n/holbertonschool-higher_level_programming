@@ -9,19 +9,23 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """return str"""
         return ('[Square] ({}) {}/{} - {}'.format(self.id, self.x,
                 self.y, self.width))
 
     @property
     def size(self):
+        """size"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """size setter"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """update"""
         if args:
             l = ["id", "width", "x", "y"]
             con = 0
@@ -33,6 +37,7 @@ class Square(Rectangle):
                 setattr(self, k, v)
 
     def to_dictionary(self):
+        """to dictionary"""
         l = ["id", "size", "x", "y"]
         d = {}
         for i in range(len(l)):
