@@ -15,6 +15,7 @@ class TestSquare(unittest.TestCase):
         result = pep8style.check_files(['models/square.py'])
         self.assertEqual(result.total_errors, 0, "Found code style errors \
             (and warnings).")
+
     """Task 11"""
     def test_getter(self):
         r1 = Square(5)
