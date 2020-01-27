@@ -33,8 +33,8 @@ class Base:
                 name = i.__class__.__name__
                 l.append(i.to_dictionary())
                 name += ".json"
-            with open(name, mode="w") as f:
-                f.write(cls.to_json_string(l))
+                with open(name, mode="w") as f:
+                    f.write(cls.to_json_string(l))
         else:
             name2 = cls.__name__
             name2 += ".json"
