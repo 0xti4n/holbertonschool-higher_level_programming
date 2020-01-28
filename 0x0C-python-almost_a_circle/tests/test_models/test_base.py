@@ -64,7 +64,8 @@ class TestBaseClassCreation(unittest.TestCase):
         with self.assertRaises(TypeError) as e:
             Base.to_json_string()
             self.assertEqual(err, str(e.exception))
-            err = "to_json_string() takes 1 positional argument but 2 were given"
+            err = "to_json_string() takes 1 positional \
+                argument but 2 were given"
 
         with self.assertRaises(TypeError) as e:
             Base.to_json_string([{1, 2}], [{3, 4}])
@@ -75,7 +76,7 @@ class TestBaseClassCreation(unittest.TestCase):
         with self.assertRaises(AttributeError) as e:
             Base.save_to_file([Base(1), Base(2)])
         self.assertEqual(
-                "'Base' object has no attribute 'to_dictionary'", 
+                "'Base' object has no attribute 'to_dictionary'",
                 str(e.exception))
 
     def test_load_from_file(self):
