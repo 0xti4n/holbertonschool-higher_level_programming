@@ -21,7 +21,7 @@ if __name__ == "__main__":
     flag = 0
     for state in session.query(State).order_by(State.id).all():
         if argv[4] in state.name:
-            print("{}".format(state.id))
+            print(state.id)
             flag = 1
     if flag == 0:
         print("Not found")
