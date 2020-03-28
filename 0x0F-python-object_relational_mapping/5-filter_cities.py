@@ -24,7 +24,7 @@ cities.id ASC", (argv[4],))
     flag = 0
     for i in range(0, length):
         if i == length - 1:
-            print("{}".format(to_list[i]), end=" ")
+            print("{}".format(to_list[i]), end="")
             flag = 1
         else:
             print("{},".format(to_list[i]), end=" ")
