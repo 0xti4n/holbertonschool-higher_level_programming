@@ -19,10 +19,11 @@ if __name__ == "__main__":
     session = Session()
     # HERE: no SQL query, only objects!
     flag = 0
-    for state in session.query(State).order_by(State.id).all():
-        if argv[4] in state.name:
+    for state in session.query(State.id).filter(State.name == argv[4]):
             print(state.id)
             flag = 1
+
     if flag == 0:
         print("Not found")
+
     session.close()
