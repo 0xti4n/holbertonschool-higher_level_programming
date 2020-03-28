@@ -12,9 +12,11 @@ if __name__ == '__main__':
                           passwd=argv[2], db=argv[3], charset="utf8")
     cur = con.cursor()
     cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY \
-states.id ASC".format(str(argv[4])))
+states.id ASC".format(argv[4],))
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        if (row[1] in argv[4]):
+            print(row)
+
     cur.close()
     con.close()
