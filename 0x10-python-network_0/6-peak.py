@@ -5,5 +5,4 @@
 def find_peak(list_of_integers):
     """Function that find a peak"""
     if list_of_integers:
-        ls = sorted(list_of_integers)
-        return max(ls)
+        return max(list_of_integers)
