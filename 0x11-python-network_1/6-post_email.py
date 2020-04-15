@@ -8,9 +8,7 @@ import requests
 from sys import argv
 
 if __name__ == "__main__":
-    url = argv[1]
-    dic = {}
-    dic['email'] = argv[2]
+    val = {'email': argv[2]}
 
-    r = requests.post(url, data=dic)
+    r = requests.post(argv[1], data=val)
     print(r.text)
