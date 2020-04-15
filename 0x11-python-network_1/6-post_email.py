@@ -9,8 +9,8 @@ from sys import argv
 
 if __name__ == "__main__":
     url = argv[1]
-    data = {}
-    data['email'] = argv[2]
+    dic = {}
+    dic['email'] = argv[2]
 
-    r = requests.post(url, data)
+    r = requests.post(url, data=dic)
     print(r.text)
