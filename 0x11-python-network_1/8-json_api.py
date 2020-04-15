@@ -13,13 +13,13 @@ if __name__ == "__main__":
     elif len(argv) < 1:
         data['q'] = ""
     r = requests.post(url, data)
-    jsn = r.json()
+    try:
+        jsn = r.json()
 
-    if len(jsn) == 0:
-        print("No result")
+        if len(jsn) == 0:
+            print("No result")
 
-    elif 'id' in jsn and 'name':
-        print("[{}] {}".format(jsn['id'], jsn['name']))
-
-    elif 'id' not in jsn and 'name' not in jsn:
+        elif 'id' in jsn and 'name':
+            print("[{}] {}".format(jsn['id'], jsn['name']))
+    except ValueError:
         print("Not a valid JSON")
