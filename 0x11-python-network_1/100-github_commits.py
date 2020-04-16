@@ -12,5 +12,7 @@ if __name__ == "__main__":
     r = requests.get(url)
     data = r.json()
 
-    for i in range(0, 10):
-        print(data[i]['sha'] + ":" + " " + data[i]['commit']['author']['name'])
+    for elm in data[0:10]:
+        sha = elm['sha']
+        name = elm['commit']['author']['name']
+        print("{}: {}".format(sha, name))
