@@ -13,4 +13,4 @@ if __name__ == "__main__":
     data = r.json()
 
     for i in range(0, 10):
-        print(data[i]['sha'] + " " + data[i]['commit']['author']['name'])
+        print(data[i]['sha'] + ":" + " " + data[i]['commit']['author']['name'])
