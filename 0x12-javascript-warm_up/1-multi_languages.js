@@ -1,7 +1,9 @@
 #!/usr/bin/node
 
-const lines = ['C is fun', 'Python is cool', 'Javascript is amazing'];
+const first = 'C is fun';
+const second = 'Python is cool';
+const third = 'Javascript is amazing';
 
-for (const line in lines) {
-  console.log(`${lines[line]}`);
-}
+console.log(first);
+console.log(second);
+console.log(third);
