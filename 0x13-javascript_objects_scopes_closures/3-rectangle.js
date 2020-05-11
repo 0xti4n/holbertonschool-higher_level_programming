@@ -11,7 +11,7 @@ module.exports = class Rectangle {
   }
 
   print () {
-    const letter = 'x';
+    const letter = 'X';
     for (let col = 0; col < this.height; col++) {
       console.log(letter.repeat(this.width));
     }
