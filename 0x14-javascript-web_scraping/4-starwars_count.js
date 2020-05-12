@@ -12,8 +12,12 @@ request(args[0], (error, response, body) => {
       let con = 0;
       for (let i = 0; i < data.length; i++) {
         const dataCharacteres = data[i].characters;
-        if (dataCharacteres.indexOf('https://swapi-api.hbtn.io/api/people/18/') !== -1) {
-          con++;
+        for (let j = 0; j < dataCharacteres.length; j++) {
+          const splt = dataCharacteres[j].split('/');
+          const res = splt.filter(element => element === '18');
+          if (res.length > 0) {
+            con++;
+          }
         }
       }
       console.log(con);
